@@ -59,5 +59,27 @@
   "public_contracts_sha": "66acc7b673cafdabcb3ff44a5402827c1e1b64b4",
   "private_pr": "https://github.com/phuk-prog/drivemate-app/pull/4",
   "github_verification_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39974699433",
-  "github_verification_status": "in_progress"
+  "github_verification_status": "completed",
+  "github_verification_conclusion": "success",
+  "github_verified_checkout": "d4eba3a6c2e22ed816379d7443ede782c3bd42ad",
+  "github_source_sha256": "771178d5898badf3f613814271676b16ced164001d1ed86f6e4149f1713e9398",
+  "github_whole_app_tests": {
+    "tests": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "github_gates": {
+    "base_ancestor": true,
+    "diff_check": true,
+    "branch_scope": true,
+    "source_safety": true,
+    "contracts_available": true,
+    "contract_tool_tests": true,
+    "android": true,
+    "integration_wiring": true,
+    "all_four_preferences": true,
+    "frozen_suite_comparison": true,
+    "nonempty_unit_results": true
+  }
 }

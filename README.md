@@ -58,3 +58,5 @@ Only automated verification is required. Private source and raw build logs stay 
 - Test infrastructure: **19 self-tests passed**; all 14 static integration checks passed and detected their binding removed in memory.
 - Four-preference coverage: warning timing 6 runtime / 4 static; lane suppression 10 / 3; map-view/recenter decisions 4 / 5; sensor-assisted heading 12 / 3. Cases can support more than one preference. Static checks do not execute map rendering.
 - The newly detected cached-heading reset defect was fixed in private PR #4. Application code stays private; no merge or release is claimed here.
+
+Expanded [private GitHub verification](https://github.com/phuk-prog/drivemate-app/actions/runs/39974699433) passed for candidate `253f0577bb32f9d6d216957aca37a495d9724f2c`: 65 app tests, 19 runner/coverage self-tests, all four preference-evidence gates, source checks, lint and debug assembly.
