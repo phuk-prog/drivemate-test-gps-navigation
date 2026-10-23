@@ -38,3 +38,5 @@ Use a parked phone or controlled simulator for these checks; no distracting inte
 | Device acceptance | Outstanding; checklist items remain unmarked |
 
 See `results/comparison.json` for the calculated comparison, `results/evidence.json` for exact commits and source identity, and `results/coverage.json` for each checklist requirement and remaining gaps. The candidate is in [private app PR #4](https://github.com/phuk-prog/drivemate-app/pull/4); production main is unchanged. CI executes on that private PR. No app source or APK is published here.
+
+Private [GitHub verification run](https://github.com/phuk-prog/drivemate-app/actions/runs/39966405982) passed for candidate `d4089ce908d4948f42f1067f2ef4f56ba1c30385`: 51 app tests, two runner self-tests, source scan, lint and debug assembly. Physical-device checks remain outstanding.

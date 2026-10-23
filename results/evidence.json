@@ -6,7 +6,7 @@
   "public_contracts_sha": "4daf587d6589b454f9700dbc8b9d291bc304cadd",
   "private_pr": "https://github.com/phuk-prog/drivemate-app/pull/4",
   "ci_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39966405982",
-  "ci_status": "in_progress",
+  "ci_status": "completed",
   "executed_local_commit": "f33e7478ba6ec097dd67d078953bfb001090b758",
   "local_app_tree": "127025d3d27d139e50278520492493a48baff513",
   "local_base_commit": "88b638cf9992dbf18c504e31da202b6b2add0cb4",
@@ -37,5 +37,25 @@
     "cause": "Result directory absent when writing the test report in a fresh checkout",
     "fix": "Create the result directory and add a fresh-checkout runner regression test",
     "production_code_unchanged_by_runner_recovery": true
-  }
+  },
+  "ci_conclusion": "success",
+  "ci_verified_head": "4264d3ef880b42e9c73fd1141ef94ef8abb77063",
+  "ci_source_sha256": "b2bb33cebc2fb347b6781e3c358f9f51c0b138099a64cc3dfc50f517569dee9b",
+  "ci_whole_app_counts": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ci_gates": {
+    "base_ancestor": true,
+    "diff_check": true,
+    "branch_scope": true,
+    "source_safety": true,
+    "contracts_available": true,
+    "contract_tool_tests": true,
+    "android": true,
+    "nonempty_unit_results": true
+  },
+  "ci_runner_self_tests": 2
 }
