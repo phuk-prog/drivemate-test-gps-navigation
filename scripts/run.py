@@ -36,6 +36,7 @@ with tempfile.TemporaryDirectory(prefix='gps-contract-') as temp:
             cases.append({'suite': c.get('classname').split('.')[-1], 'case': c.get('name'), 'passed': c.find('failure') is None and c.find('error') is None and c.find('skipped') is None})
     expected = 43 if a.phase == 'final' else 19
     data = {'expected': expected, 'phase': a.phase, 'production_base': a.production_base, 'contract_sha256': hashlib.sha256(hash_input).hexdigest(), 'cases': cases, 'total': len(cases), 'passed': sum(c['passed'] for c in cases), 'gradle_exit': proc.returncode, 'scope': 'synthetic JVM production-domain contracts; Android UI and physical GPS unverified'}
+    (root / 'results').mkdir(exist_ok=True)
     (root / 'results' / (a.phase + '.json')).write_text(json.dumps(data, indent=2) + '\n')
     print(json.dumps(data))
     raise SystemExit(0 if len(cases) == expected and proc.returncode == 0 else 1)
