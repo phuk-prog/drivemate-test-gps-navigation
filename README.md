@@ -20,6 +20,14 @@ The baseline records absent continuous-uncertainty support explicitly; those cas
 
 `python3 scripts/compare.py` verifies the identical 19-case before/after contract and requires 24 additional final edge cases. The three baseline cases for the absent uncertainty policy are reported as missing support, not physical timing measurements.
 
+## Shared GPS + map + roundabout test batches (owner policy, 23 October 2026)
+
+Follow the [canonical public grouped test policy](https://github.com/phuk-prog/drivemate-test-map-display/blob/main/contracts/grouped-public-tests.json). DriveMate tests are public contracts, traceable third-party references, shareable fixtures and sanitized per-item results, but real private app source and personal data remain private.
+
+**Run 2–4 related categories in a single coherent test harness/build or internal test APK where appropriate.** Roundabout and junction testing may cover **01 GPS, 02 map/carriageway display, 04 lane advice and 05 routing/turn legality** together on identical dated real UK road geometry, legal-sign evidence and GPS replay. Do not run duplicate APK builds for separate categories when the same run can exercise all the relevant requirements. Accept and report each item separately; keep before/after comparisons and safety/robot gates mandatory. Do not infer 04/05 readiness just because their test group is defined.
+
+The [public map-display test repository](https://github.com/phuk-prog/drivemate-test-map-display) hosts related Category 2 and independently sourced UK-road fixtures. A combined 01/02/04/05 execution is **not** claimed until a linked GitHub run confirms it. For source-integrated tests, private GitHub Actions executes pinned public tests against actual app classes, and public artifacts contain only safe result summaries; no APK, private source, tokens, signing key or TomTom key is publicly published before release gates.
+
 ## Initial Category 1 comparison — 23 October 2026
 
 | Check | Result |
