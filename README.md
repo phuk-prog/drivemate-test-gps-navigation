@@ -1,5 +1,9 @@
 # DriveMate GPS and navigation acceptance
 
+## Shared GPS + map + roundabout batch policy
+
+Per the owner's 23 October 2026 instruction, public GPS tests are part of [the grouped public testing plan](https://github.com/phuk-prog/drivemate-test-map-display/blob/main/contracts/grouped-public-tests.json). Combine two to four related categories, e.g., **01 GPS + 02 map route line + 04 lane guidance + 05 legal routing**, when exercising the same real UK roundabout. One pinned source dataset, GPS trace/replay, test runner and necessary test build may serve several categories, but category and checklist pass/fail results remain independent. Source of truth must come from legally usable external UK evidence and dated ground facts, not self-referential app output. Keep source and credentials private; public repo has tests and sanitized evidence only. No release APK unless mandatory replay/robot checks pass.
+
 Latest expanded results and per-preference evidence: [`results/reliability/`](results/reliability/). The original comparison remains preserved in the root results files.
 
 Public synthetic test contracts and sanitized results for checklist Category 1. Application source stays in the private app repository. No real journeys, coordinates, logs, keys or APKs are published here.
