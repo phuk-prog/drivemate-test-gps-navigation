@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "passed": 10,
+    "total": 19
+  },
+  "after": {
+    "passed": 19,
+    "total": 19
+  },
+  "final": {
+    "passed": 43,
+    "total": 43
+  },
+  "improved_cases": [
+    "goodPositionClearsUncertaintyImmediately",
+    "invalidGravityCannotPoisonHeading",
+    "invalidGyroCannotPoisonHeading",
+    "invalidRouteDistanceCannotClaimLanes",
+    "missingAccuracyCannotClaimLanes",
+    "negativeAccuracyCannotClaimLanes",
+    "olderGyroSampleCannotRewindIntegrationClock",
+    "recoveredPositionResetsContinuousUncertaintyTimer",
+    "uncertainLabelStartsAtThreeSeconds"
+  ],
+  "independent_final_cases": 24,
+  "baseline_absent_feature_cases": 3,
+  "regressions": 0,
+  "device_verified": false
+}

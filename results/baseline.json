@@ -1,0 +1,87 @@
+{
+  "phase": "baseline",
+  "production_base": "f859918ad60d87c6bc9f6b4ffb52e151cd3e212c",
+  "contract_sha256": "efce3aa22d6512ba13fb1aecd643d0cbcdb13d00ca5df9ada040233af970bf4a",
+  "cases": [
+    {
+      "case": "recoveredPositionResetsContinuousUncertaintyTimer",
+      "passed": false
+    },
+    {
+      "case": "briefGpsLossKeepsExistingSpokenWarningQuiet",
+      "passed": true
+    },
+    {
+      "case": "negativeAccuracyCannotClaimLanes",
+      "passed": false
+    },
+    {
+      "case": "stalePositionHidesLanes",
+      "passed": true
+    },
+    {
+      "case": "invalidGyroCannotPoisonHeading",
+      "passed": false
+    },
+    {
+      "case": "missingAccuracyCannotClaimLanes",
+      "passed": false
+    },
+    {
+      "case": "sensorsCannotKeepHeadingFreshIndefinitely",
+      "passed": true
+    },
+    {
+      "case": "uncertainLabelStartsAtThreeSeconds",
+      "passed": false
+    },
+    {
+      "case": "existingSpokenWarningStillStartsAtOneMinute",
+      "passed": true
+    },
+    {
+      "case": "reliablePositionAllowsLanes",
+      "passed": true
+    },
+    {
+      "case": "stationaryGpsDoesNotChangeHeading",
+      "passed": true
+    },
+    {
+      "case": "goodPositionClearsUncertaintyImmediately",
+      "passed": false
+    },
+    {
+      "case": "invalidRouteDistanceCannotClaimLanes",
+      "passed": false
+    },
+    {
+      "case": "inaccuratePositionHidesLanesImmediately",
+      "passed": true
+    },
+    {
+      "case": "estimatedPositionNeverAllowsLanes",
+      "passed": true
+    },
+    {
+      "case": "lanesRecoverOnlyAfterStableFixes",
+      "passed": true
+    },
+    {
+      "case": "olderGyroSampleCannotRewindIntegrationClock",
+      "passed": false
+    },
+    {
+      "case": "gyroSupportsHeadingBetweenMeasuredFixes",
+      "passed": true
+    },
+    {
+      "case": "invalidGravityCannotPoisonHeading",
+      "passed": false
+    }
+  ],
+  "total": 19,
+  "passed": 10,
+  "gradle_exit": 1,
+  "scope": "synthetic JVM production-domain contracts; Android UI and physical GPS unverified"
+}

@@ -1,0 +1,227 @@
+{
+  "expected": 43,
+  "phase": "final",
+  "production_base": "f859918ad60d87c6bc9f6b4ffb52e151cd3e212c",
+  "contract_sha256": "efce3aa22d6512ba13fb1aecd643d0cbcdb13d00ca5df9ada040233af970bf4a",
+  "cases": [
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "recoveredPositionResetsContinuousUncertaintyTimer",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "briefGpsLossKeepsExistingSpokenWarningQuiet",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "negativeAccuracyCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "stalePositionHidesLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidGyroCannotPoisonHeading",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "missingAccuracyCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "sensorsCannotKeepHeadingFreshIndefinitely",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "uncertainLabelStartsAtThreeSeconds",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "existingSpokenWarningStillStartsAtOneMinute",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "reliablePositionAllowsLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "stationaryGpsDoesNotChangeHeading",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "goodPositionClearsUncertaintyImmediately",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidRouteDistanceCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "inaccuratePositionHidesLanesImmediately",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "estimatedPositionNeverAllowsLanes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "lanesRecoverOnlyAfterStableFixes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "olderGyroSampleCannotRewindIntegrationClock",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "gyroSupportsHeadingBetweenMeasuredFixes",
+      "passed": true
+    },
+    {
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidGravityCannotPoisonHeading",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "farFutureFixCannotEstablishPosition",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "estimatedPositionCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "uncertainPositionNeverAutomaticallyRecentres",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "noPermissionCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "implausibleJumpDoesNotReplacePosition",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "invalidationRemovesCachedLaneConfidenceImmediately",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "nonfiniteAccuracyCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "uncertaintyPreservesTheExistingMapView",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "resetDoesNotCarryUncertaintyAcrossSessions",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "freshnessBoundaryIsExplicit",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "uncertaintyNoticeRemainsVisibleDuringRerouting",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "unreliablePositionNeedsContinuousThreeSecondsAcrossManyUpdates",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "invalidCoordinatesAreRejected",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "lossOfFreshFixExpiresAuthority",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "longitudeWrapIsAShortMovement",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "staleFixCannotEstablishPosition",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "missingTimestampCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "missingAccuracyCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "duplicateAndOlderFixesCannotMovePosition",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "networkFixCannotEstablishNavigationPosition",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "backwardClockStartsANewUncertaintyPeriod",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "futureFixCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "suite": "GpsIndependentTest",
+      "case": "poorPrecisionCannotEstablishNavigationPosition",
+      "passed": true
+    }
+  ],
+  "total": 43,
+  "passed": 43,
+  "gradle_exit": 0,
+  "scope": "synthetic JVM production-domain contracts; Android UI and physical GPS unverified"
+}

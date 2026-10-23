@@ -1,0 +1,30 @@
+{
+  "baseline_app_sha": "f859918ad60d87c6bc9f6b4ffb52e151cd3e212c",
+  "baseline_app_tree": "77e85ec5d30c99a3f88d922a046311081f688f4d",
+  "candidate_app_sha": "86f9d06a59f1610db86aa5478c5c326ad9e8d938",
+  "candidate_app_tree": "127025d3d27d139e50278520492493a48baff513",
+  "public_contracts_sha": "1fec411cf615b302d2a788a898ed44d9824dd9f6",
+  "private_pr": "https://github.com/phuk-prog/drivemate-app/pull/4",
+  "ci_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39965765449",
+  "ci_status": "in_progress",
+  "executed_local_commit": "7e0cde0acb080b9d6c8430f7f7ab79c32c4a11cd",
+  "local_app_tree": "127025d3d27d139e50278520492493a48baff513",
+  "local_base_commit": "88b638cf9992dbf18c504e31da202b6b2add0cb4",
+  "baseline_source_equivalence": "Baseline app tree equals GitHub production app tree; candidate app tree equals tested local app tree. Local commit history differs from GitHub.",
+  "whole_app_counts": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_sha256": "bf2b4790e4a7ba9d65767481733778006802580c3b0960d15fc7025f93faf075",
+  "source_scan_passed": true,
+  "lint_errors": 0,
+  "lint_warnings": 108,
+  "debug_assembly": "passed",
+  "workflow_lint": "passed",
+  "device_checks": "not executed",
+  "measured_physical_accuracy_improvement": "unavailable",
+  "ai_tokens_and_cost": "unavailable",
+  "release_ready": false
+}

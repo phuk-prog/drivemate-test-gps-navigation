@@ -24,3 +24,16 @@ Use a parked phone or controlled simulator for these checks; no distracting inte
 - Check the actual map, instruction card and Android Auto for stale lane claims. JVM tests do not measure real GPS accuracy or Android rendering.
 
 `python3 scripts/compare.py` verifies the identical 19-case before/after contract and requires 24 additional final edge cases. The three baseline cases for the absent uncertainty policy are reported as missing support, not physical timing measurements.
+
+## Category 1 comparison — 23 October 2026
+
+| Check | Result |
+|---|---|
+| Unchanged app baseline | 10/19 acceptance checks passed |
+| Candidate, identical acceptance inputs | 19/19 passed |
+| Separate final verification | 43/43 GPS checks passed, including 24 additional edge cases |
+| Existing map regressions | 8/8 passed |
+| Whole-app verification | 51/51 tests; lint 0 errors and 108 warnings; debug assembly passed |
+| Device acceptance | Outstanding; checklist items remain unmarked |
+
+See `results/comparison.json` for the calculated comparison, `results/evidence.json` for exact commits and source identity, and `results/coverage.json` for each checklist requirement and remaining gaps. The candidate is in [private app PR #4](https://github.com/phuk-prog/drivemate-app/pull/4); production main is unchanged. CI executes on that private PR. No app source or APK is published here.

@@ -1,0 +1,22 @@
+{
+  "01.01": {
+    "candidate": "Separate continuous three-second visual uncertainty timer; existing one-minute speech unchanged",
+    "evidence": "Three identical acceptance tests; additional monotonic-clock/reset tests",
+    "remaining": "Android timing and visibility"
+  },
+  "01.02": {
+    "candidate": "Unreliable selected-provider evidence and stale fixes invalidate cached lane confidence; malformed confidence fails closed",
+    "evidence": "Immediate suppression, stable recovery and cache-invalidation domain tests",
+    "remaining": "Controller/UI/voice/Android Auto integration on device"
+  },
+  "01.03": {
+    "candidate": "Automatic and initial camera centering gated during uncertainty; manual pan retains control; explicit recenter retained",
+    "evidence": "Three independent camera-decision tests plus source review",
+    "remaining": "Actual map gestures, resume and recenter rendering"
+  },
+  "01.04": {
+    "candidate": "Gyro/gravity support for heading; invalid and older sensor samples rejected; registration failure handled and sessions reset",
+    "evidence": "Actual production heading estimator under synthetic sensor input",
+    "remaining": "Phone hardware, registration failures and lifecycle"
+  }
+}
