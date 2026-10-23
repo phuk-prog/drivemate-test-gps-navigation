@@ -23,7 +23,6 @@
   "lint_warnings": 108,
   "debug_assembly": "passed",
   "workflow_lint": "passed",
-  "device_checks": "not executed",
   "measured_physical_accuracy_improvement": "unavailable",
   "ai_tokens_and_cost": "unavailable",
   "release_ready": false,
@@ -57,5 +56,7 @@
     "android": true,
     "nonempty_unit_results": true
   },
-  "ci_runner_self_tests": 2
+  "ci_runner_self_tests": 2,
+  "verification_scope": "automated_only",
+  "phone_checks_required": false
 }

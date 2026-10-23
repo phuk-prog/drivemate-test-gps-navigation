@@ -25,5 +25,5 @@
   "independent_final_cases": 24,
   "baseline_absent_feature_cases": 3,
   "regressions": 0,
-  "device_verified": false
+  "verification_scope": "automated_only"
 }

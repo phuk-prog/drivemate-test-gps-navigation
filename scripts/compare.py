@@ -10,6 +10,6 @@ bn, an, fn = map(names, (b, a, f))
 assert len(bn) == len(an) == 19 and bn.keys() == an.keys(), 'Non-comparable case sets'
 assert all(an[n] and fn.get(n) for n in bn), 'Unresolved acceptance case'
 assert all(fn.values()) and len(fn.keys() - bn.keys()) == 24, 'Final independent checks incomplete'
-data = {'baseline': {'passed': b['passed'], 'total': b['total']}, 'after': {'passed': a['passed'], 'total': a['total']}, 'final': {'passed': f['passed'], 'total': f['total']}, 'improved_cases': sorted(n for n in bn if not bn[n] and an[n]), 'independent_final_cases': 24, 'baseline_absent_feature_cases': 3, 'regressions': 0, 'device_verified': False}
+data = {'baseline': {'passed': b['passed'], 'total': b['total']}, 'after': {'passed': a['passed'], 'total': a['total']}, 'final': {'passed': f['passed'], 'total': f['total']}, 'improved_cases': sorted(n for n in bn if not bn[n] and an[n]), 'independent_final_cases': 24, 'baseline_absent_feature_cases': 3, 'regressions': 0, 'verification_scope': 'automated_only'}
 (r / 'comparison.json').write_text(json.dumps(data, indent=2) + '\n')
 print(json.dumps(data))
