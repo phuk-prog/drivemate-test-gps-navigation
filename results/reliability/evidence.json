@@ -1,0 +1,63 @@
+{
+  "verification_scope": "automated_only",
+  "phone_checks_required": false,
+  "baseline_app_sha": "a56ee50ca74015ed98d40f62c7ba631bc80debef",
+  "baseline_executed_local_commit": "5046949c89622aace572e968499dcd5d7881234e",
+  "baseline_app_tree": "127025d3d27d139e50278520492493a48baff513",
+  "executed_local_candidate": "353ff8ce387344964b7c68364ab929ded3058cc9",
+  "candidate_source_tree": "e9ddaadeff8e7d7aaa521e74221a0ee24430b105",
+  "candidate_app_tree": "0a3aa118089dda2ea41ddbc5f9fce22379cedc4d",
+  "local_source_sha256": "9f2762609d1d3d77f7d71fff7bd70ae25814173a0cc0a3d6a38780d9f6c07b1f",
+  "executed_contract_sha256": "40975ee17322eef33af4aa130cd83a313a7da5731397362baf461754e801caee",
+  "whole_app_tests": {
+    "tests": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "runner_self_tests": 19,
+  "static_integration_checks": 14,
+  "static_removed_binding_detections": 14,
+  "preference_ids": [
+    "01.01",
+    "01.02",
+    "01.03",
+    "01.04"
+  ],
+  "local_gates": {
+    "base_ancestor": true,
+    "diff_check": true,
+    "branch_scope": true,
+    "source_safety": true,
+    "contracts_available": true,
+    "contract_tool_tests": true,
+    "android": true,
+    "integration_wiring": true,
+    "all_four_preferences": true,
+    "frozen_suite_comparison": true,
+    "nonempty_unit_results": true
+  },
+  "release_ready": false,
+  "limitations": [
+    "Static source integration guards do not execute map rendering.",
+    "Android sensor tests use automated simulation and mocked SensorManager registration; no physical accuracy measurement is claimed."
+  ],
+  "failure_learning": [
+    {
+      "kind": "production defect",
+      "check": "stopClearsHeadingEvenWhenSensorsWereUnavailable",
+      "cause": "MotionSensors.stop returned early when no sensor listeners were registered, retaining a GPS-seeded heading",
+      "fix": "Clear heading and filter state on every stop; unregister only if registered"
+    },
+    {
+      "kind": "test-harness setup",
+      "cause": "Ambiguous overloaded Android sensor matchers and throwing Mockito stubs while setting up fallback behavior",
+      "fix": "Use explicitly typed matchers and doReturn/doThrow stubs before freezing the comparison suite"
+    }
+  ],
+  "candidate_private_sha": "253f0577bb32f9d6d216957aca37a495d9724f2c",
+  "public_contracts_sha": "66acc7b673cafdabcb3ff44a5402827c1e1b64b4",
+  "private_pr": "https://github.com/phuk-prog/drivemate-app/pull/4",
+  "github_verification_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39974699433",
+  "github_verification_status": "in_progress"
+}

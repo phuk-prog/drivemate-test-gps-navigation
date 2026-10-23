@@ -1,5 +1,7 @@
 # DriveMate GPS and navigation acceptance
 
+Latest expanded results and per-preference evidence: [`results/reliability/`](results/reliability/). The original comparison remains preserved in the root results files.
+
 Public synthetic test contracts and sanitized results for checklist Category 1. Application source stays in the private app repository. No real journeys, coordinates, logs, keys or APKs are published here.
 
 Run in an authorized private workspace with the Android SDK, JDK 17 and Gradle dependencies available:
@@ -48,3 +50,11 @@ python3 scripts/reliability_compare.py
 ```
 
 Only automated verification is required. Private source and raw build logs stay private.
+
+### Expanded final result
+
+- Identical expanded suite: **56/57 before → 57/57 after → 57/57 in the separate final run**.
+- Whole-app regressions: **65/65 tests passed** (57 GPS and eight map tests), plus source scan, lint and debug assembly.
+- Test infrastructure: **19 self-tests passed**; all 14 static integration checks passed and detected their binding removed in memory.
+- Four-preference coverage: warning timing 6 runtime / 4 static; lane suppression 10 / 3; map-view/recenter decisions 4 / 5; sensor-assisted heading 12 / 3. Cases can support more than one preference. Static checks do not execute map rendering.
+- The newly detected cached-heading reset defect was fixed in private PR #4. Application code stays private; no merge or release is claimed here.

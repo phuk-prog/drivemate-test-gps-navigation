@@ -13,6 +13,8 @@ jobs:
           persist-credentials: false
       - name: Validate public scripts and result consistency (not app execution)
         run: |
-          python3 -m py_compile scripts/run.py scripts/compare.py
+          python3 -m py_compile scripts/*.py
           python3 -m unittest discover -s tools_tests
           python3 scripts/compare.py
+          python3 scripts/reliability_compare.py
+          python3 scripts/coverage_check.py

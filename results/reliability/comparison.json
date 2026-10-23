@@ -1,0 +1,20 @@
+{
+  "before": {
+    "passed": 56,
+    "total": 57
+  },
+  "after": {
+    "passed": 57,
+    "total": 57
+  },
+  "final": {
+    "passed": 57,
+    "total": 57
+  },
+  "improved_cases": [
+    "com.drivemate.app.nav.GpsSensorAdapterTest#stopClearsHeadingEvenWhenSensorsWereUnavailable"
+  ],
+  "regressions": [],
+  "same_runtime_contracts": true,
+  "scope": "automated_only"
+}
