@@ -1,0 +1,78 @@
+{
+  "scope": "static source integration guards, not UI rendering",
+  "checks": [
+    {
+      "id": "uncertainty-state",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "uncertainty-notice",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "uncertainty-label",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "cached-lanes-cleared",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "spoken-lanes-gated",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "stale-fix-watchdog",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "automatic-recenter-gated",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "recenter-rechecked-after-wait",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "manual-pan-retains-view",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "explicit-recenter-available",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "initial-view-retained",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "gyro-event-connected",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "gravity-event-connected",
+      "passed": true,
+      "disconnection_detected": true
+    },
+    {
+      "id": "measured-heading-connected",
+      "passed": true,
+      "disconnection_detected": true
+    }
+  ],
+  "passed": 14,
+  "total": 14,
+  "disconnections_detected": 14
+}

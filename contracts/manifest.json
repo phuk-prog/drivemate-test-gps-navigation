@@ -1,0 +1,139 @@
+{
+  "baseline": [
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsAcceptanceTest.kt",
+      "class": "com.drivemate.app.nav.GpsAcceptanceTest",
+      "tests": [
+        "reliablePositionAllowsLanes",
+        "inaccuratePositionHidesLanesImmediately",
+        "missingAccuracyCannotClaimLanes",
+        "invalidRouteDistanceCannotClaimLanes",
+        "negativeAccuracyCannotClaimLanes",
+        "stalePositionHidesLanes",
+        "estimatedPositionNeverAllowsLanes",
+        "lanesRecoverOnlyAfterStableFixes",
+        "briefGpsLossKeepsExistingSpokenWarningQuiet",
+        "existingSpokenWarningStillStartsAtOneMinute",
+        "gyroSupportsHeadingBetweenMeasuredFixes",
+        "invalidGyroCannotPoisonHeading",
+        "invalidGravityCannotPoisonHeading",
+        "olderGyroSampleCannotRewindIntegrationClock",
+        "sensorsCannotKeepHeadingFreshIndefinitely",
+        "stationaryGpsDoesNotChangeHeading",
+        "uncertainLabelStartsAtThreeSeconds",
+        "recoveredPositionResetsContinuousUncertaintyTimer",
+        "goodPositionClearsUncertaintyImmediately"
+      ]
+    }
+  ],
+  "after": [
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsAcceptanceTest.kt",
+      "class": "com.drivemate.app.nav.GpsAcceptanceTest",
+      "tests": [
+        "reliablePositionAllowsLanes",
+        "inaccuratePositionHidesLanesImmediately",
+        "missingAccuracyCannotClaimLanes",
+        "invalidRouteDistanceCannotClaimLanes",
+        "negativeAccuracyCannotClaimLanes",
+        "stalePositionHidesLanes",
+        "estimatedPositionNeverAllowsLanes",
+        "lanesRecoverOnlyAfterStableFixes",
+        "briefGpsLossKeepsExistingSpokenWarningQuiet",
+        "existingSpokenWarningStillStartsAtOneMinute",
+        "gyroSupportsHeadingBetweenMeasuredFixes",
+        "invalidGyroCannotPoisonHeading",
+        "invalidGravityCannotPoisonHeading",
+        "olderGyroSampleCannotRewindIntegrationClock",
+        "sensorsCannotKeepHeadingFreshIndefinitely",
+        "stationaryGpsDoesNotChangeHeading",
+        "uncertainLabelStartsAtThreeSeconds",
+        "recoveredPositionResetsContinuousUncertaintyTimer",
+        "goodPositionClearsUncertaintyImmediately"
+      ]
+    }
+  ],
+  "final": [
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsAcceptanceTest.kt",
+      "class": "com.drivemate.app.nav.GpsAcceptanceTest",
+      "tests": [
+        "reliablePositionAllowsLanes",
+        "inaccuratePositionHidesLanesImmediately",
+        "missingAccuracyCannotClaimLanes",
+        "invalidRouteDistanceCannotClaimLanes",
+        "negativeAccuracyCannotClaimLanes",
+        "stalePositionHidesLanes",
+        "estimatedPositionNeverAllowsLanes",
+        "lanesRecoverOnlyAfterStableFixes",
+        "briefGpsLossKeepsExistingSpokenWarningQuiet",
+        "existingSpokenWarningStillStartsAtOneMinute",
+        "gyroSupportsHeadingBetweenMeasuredFixes",
+        "invalidGyroCannotPoisonHeading",
+        "invalidGravityCannotPoisonHeading",
+        "olderGyroSampleCannotRewindIntegrationClock",
+        "sensorsCannotKeepHeadingFreshIndefinitely",
+        "stationaryGpsDoesNotChangeHeading",
+        "uncertainLabelStartsAtThreeSeconds",
+        "recoveredPositionResetsContinuousUncertaintyTimer",
+        "goodPositionClearsUncertaintyImmediately"
+      ]
+    },
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsIndependentTest.kt",
+      "class": "com.drivemate.app.nav.GpsIndependentTest",
+      "tests": [
+        "unreliablePositionNeedsContinuousThreeSecondsAcrossManyUpdates",
+        "backwardClockStartsANewUncertaintyPeriod",
+        "resetDoesNotCarryUncertaintyAcrossSessions",
+        "noPermissionCannotBecomeReliable",
+        "estimatedPositionCannotBecomeReliable",
+        "missingAccuracyCannotBecomeReliable",
+        "nonfiniteAccuracyCannotBecomeReliable",
+        "futureFixCannotBecomeReliable",
+        "missingTimestampCannotBecomeReliable",
+        "freshnessBoundaryIsExplicit",
+        "invalidCoordinatesAreRejected",
+        "staleFixCannotEstablishPosition",
+        "farFutureFixCannotEstablishPosition",
+        "duplicateAndOlderFixesCannotMovePosition",
+        "implausibleJumpDoesNotReplacePosition",
+        "longitudeWrapIsAShortMovement",
+        "networkFixCannotEstablishNavigationPosition",
+        "poorPrecisionCannotEstablishNavigationPosition",
+        "lossOfFreshFixExpiresAuthority",
+        "uncertainPositionNeverAutomaticallyRecentres",
+        "uncertaintyPreservesTheExistingMapView",
+        "firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+        "uncertaintyNoticeRemainsVisibleDuringRerouting",
+        "invalidationRemovesCachedLaneConfidenceImmediately"
+      ]
+    },
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsPreferenceFlowTest.kt",
+      "class": "com.drivemate.app.nav.GpsPreferenceFlowTest",
+      "tests": [
+        "lossHidesLanesBeforeShowingTheDelayedVisualWarning",
+        "intermittentBadFixesCannotAccumulateIntoAContinuousWarning",
+        "recoveryRequiresStableLaneConfidenceButClearsTheLabelImmediately",
+        "freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+        "uncertainMapRemainsPannableWithoutTimedRecentering",
+        "seededUncertaintySequencesMatchTheIndependentElapsedTimeOracle",
+        "invalidNumbersAlwaysFailClosedForPositionAndLanes",
+        "repeatedSensorResetCannotCarryHeadingBetweenSessions"
+      ]
+    },
+    {
+      "file": "contracts/kotlin/com/drivemate/app/nav/GpsSensorAdapterTest.kt",
+      "class": "com.drivemate.app.nav.GpsSensorAdapterTest",
+      "tests": [
+        "missingSensorsDoNotRegisterAndStillAllowMeasuredGpsHeading",
+        "stopClearsHeadingEvenWhenSensorsWereUnavailable",
+        "deniedRegistrationFallsBackWithoutCrashing",
+        "bothRegistrationFailuresAreContainedAndPartialListenersRemoved",
+        "accelerometerIsUsedWhenGravitySensorIsMissing",
+        "successfulStopAndRestartDoNotReusePreviousHeading"
+      ]
+    }
+  ]
+}

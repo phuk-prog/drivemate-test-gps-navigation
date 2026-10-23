@@ -1,0 +1,93 @@
+{
+  "01.01": {
+    "requirement": "Show Position uncertain after three seconds of continuous uncertainty.",
+    "runtime_checks": 6,
+    "static_wiring_checks": 4,
+    "automated_checks_passed": true,
+    "runtime_case_ids": [
+      "com.drivemate.app.nav.GpsAcceptanceTest#existingSpokenWarningStillStartsAtOneMinute",
+      "com.drivemate.app.nav.GpsAcceptanceTest#goodPositionClearsUncertaintyImmediately",
+      "com.drivemate.app.nav.GpsAcceptanceTest#recoveredPositionResetsContinuousUncertaintyTimer",
+      "com.drivemate.app.nav.GpsAcceptanceTest#uncertainLabelStartsAtThreeSeconds",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#intermittentBadFixesCannotAccumulateIntoAContinuousWarning",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#seededUncertaintySequencesMatchTheIndependentElapsedTimeOracle"
+    ],
+    "static_check_ids": [
+      "stale-fix-watchdog",
+      "uncertainty-label",
+      "uncertainty-notice",
+      "uncertainty-state"
+    ],
+    "scope": "Production domain and Android sensor simulation tests plus static integration guards; no map rendering claim"
+  },
+  "01.02": {
+    "requirement": "Hide lane-level guidance immediately when positioning becomes unreliable.",
+    "runtime_checks": 10,
+    "static_wiring_checks": 3,
+    "automated_checks_passed": true,
+    "runtime_case_ids": [
+      "com.drivemate.app.nav.GpsAcceptanceTest#estimatedPositionNeverAllowsLanes",
+      "com.drivemate.app.nav.GpsAcceptanceTest#inaccuratePositionHidesLanesImmediately",
+      "com.drivemate.app.nav.GpsAcceptanceTest#lanesRecoverOnlyAfterStableFixes",
+      "com.drivemate.app.nav.GpsAcceptanceTest#missingAccuracyCannotClaimLanes",
+      "com.drivemate.app.nav.GpsAcceptanceTest#stalePositionHidesLanes",
+      "com.drivemate.app.nav.GpsIndependentTest#invalidationRemovesCachedLaneConfidenceImmediately",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#invalidNumbersAlwaysFailClosedForPositionAndLanes",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#lossHidesLanesBeforeShowingTheDelayedVisualWarning",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#recoveryRequiresStableLaneConfidenceButClearsTheLabelImmediately"
+    ],
+    "static_check_ids": [
+      "cached-lanes-cleared",
+      "spoken-lanes-gated",
+      "stale-fix-watchdog"
+    ],
+    "scope": "Production domain and Android sensor simulation tests plus static integration guards; no map rendering claim"
+  },
+  "01.03": {
+    "requirement": "While waiting for GPS retain the last view, allow panning and provide recentering without forced snap-backs.",
+    "runtime_checks": 4,
+    "static_wiring_checks": 5,
+    "automated_checks_passed": true,
+    "runtime_case_ids": [
+      "com.drivemate.app.nav.GpsIndependentTest#firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+      "com.drivemate.app.nav.GpsIndependentTest#uncertainPositionNeverAutomaticallyRecentres",
+      "com.drivemate.app.nav.GpsIndependentTest#uncertaintyPreservesTheExistingMapView",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#uncertainMapRemainsPannableWithoutTimedRecentering"
+    ],
+    "static_check_ids": [
+      "automatic-recenter-gated",
+      "explicit-recenter-available",
+      "initial-view-retained",
+      "manual-pan-retains-view",
+      "recenter-rechecked-after-wait"
+    ],
+    "scope": "Production domain and Android sensor simulation tests plus static integration guards; no map rendering claim"
+  },
+  "01.04": {
+    "requirement": "Use available sensors including the gyroscope to support positioning and direction.",
+    "runtime_checks": 12,
+    "static_wiring_checks": 3,
+    "automated_checks_passed": true,
+    "runtime_case_ids": [
+      "com.drivemate.app.nav.GpsAcceptanceTest#gyroSupportsHeadingBetweenMeasuredFixes",
+      "com.drivemate.app.nav.GpsAcceptanceTest#invalidGravityCannotPoisonHeading",
+      "com.drivemate.app.nav.GpsAcceptanceTest#invalidGyroCannotPoisonHeading",
+      "com.drivemate.app.nav.GpsAcceptanceTest#olderGyroSampleCannotRewindIntegrationClock",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+      "com.drivemate.app.nav.GpsPreferenceFlowTest#repeatedSensorResetCannotCarryHeadingBetweenSessions",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#accelerometerIsUsedWhenGravitySensorIsMissing",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#bothRegistrationFailuresAreContainedAndPartialListenersRemoved",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#deniedRegistrationFallsBackWithoutCrashing",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#missingSensorsDoNotRegisterAndStillAllowMeasuredGpsHeading",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#stopClearsHeadingEvenWhenSensorsWereUnavailable",
+      "com.drivemate.app.nav.GpsSensorAdapterTest#successfulStopAndRestartDoNotReusePreviousHeading"
+    ],
+    "static_check_ids": [
+      "gravity-event-connected",
+      "gyro-event-connected",
+      "measured-heading-connected"
+    ],
+    "scope": "Production domain and Android sensor simulation tests plus static integration guards; no map rendering claim"
+  }
+}

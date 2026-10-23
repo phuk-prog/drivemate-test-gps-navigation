@@ -1,0 +1,422 @@
+{
+  "schema": 2,
+  "phase": "final",
+  "production_base": "a56ee50ca74015ed98d40f62c7ba631bc80debef",
+  "app_commit": "5046949c89622aace572e968499dcd5d7881234e",
+  "app_source_tree": "127025d3d27d139e50278520492493a48baff513",
+  "contract_sha256": "efce3aa22d6512ba13fb1aecd643d0cbcdb13d00ca5df9ada040233af970bf4a",
+  "executed_contract_sha256": "40975ee17322eef33af4aa130cd83a313a7da5731397362baf461754e801caee",
+  "manifest_sha256": "a2d500e620cf2c77f672d855648e63f6792d6900d8a551fe32396da0516ebf11",
+  "expected_ids": [
+    "com.drivemate.app.nav.GpsAcceptanceTest#reliablePositionAllowsLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#inaccuratePositionHidesLanesImmediately",
+    "com.drivemate.app.nav.GpsAcceptanceTest#missingAccuracyCannotClaimLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#invalidRouteDistanceCannotClaimLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#negativeAccuracyCannotClaimLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#stalePositionHidesLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#estimatedPositionNeverAllowsLanes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#lanesRecoverOnlyAfterStableFixes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#briefGpsLossKeepsExistingSpokenWarningQuiet",
+    "com.drivemate.app.nav.GpsAcceptanceTest#existingSpokenWarningStillStartsAtOneMinute",
+    "com.drivemate.app.nav.GpsAcceptanceTest#gyroSupportsHeadingBetweenMeasuredFixes",
+    "com.drivemate.app.nav.GpsAcceptanceTest#invalidGyroCannotPoisonHeading",
+    "com.drivemate.app.nav.GpsAcceptanceTest#invalidGravityCannotPoisonHeading",
+    "com.drivemate.app.nav.GpsAcceptanceTest#olderGyroSampleCannotRewindIntegrationClock",
+    "com.drivemate.app.nav.GpsAcceptanceTest#sensorsCannotKeepHeadingFreshIndefinitely",
+    "com.drivemate.app.nav.GpsAcceptanceTest#stationaryGpsDoesNotChangeHeading",
+    "com.drivemate.app.nav.GpsAcceptanceTest#uncertainLabelStartsAtThreeSeconds",
+    "com.drivemate.app.nav.GpsAcceptanceTest#recoveredPositionResetsContinuousUncertaintyTimer",
+    "com.drivemate.app.nav.GpsAcceptanceTest#goodPositionClearsUncertaintyImmediately",
+    "com.drivemate.app.nav.GpsIndependentTest#unreliablePositionNeedsContinuousThreeSecondsAcrossManyUpdates",
+    "com.drivemate.app.nav.GpsIndependentTest#backwardClockStartsANewUncertaintyPeriod",
+    "com.drivemate.app.nav.GpsIndependentTest#resetDoesNotCarryUncertaintyAcrossSessions",
+    "com.drivemate.app.nav.GpsIndependentTest#noPermissionCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#estimatedPositionCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#missingAccuracyCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#nonfiniteAccuracyCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#futureFixCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#missingTimestampCannotBecomeReliable",
+    "com.drivemate.app.nav.GpsIndependentTest#freshnessBoundaryIsExplicit",
+    "com.drivemate.app.nav.GpsIndependentTest#invalidCoordinatesAreRejected",
+    "com.drivemate.app.nav.GpsIndependentTest#staleFixCannotEstablishPosition",
+    "com.drivemate.app.nav.GpsIndependentTest#farFutureFixCannotEstablishPosition",
+    "com.drivemate.app.nav.GpsIndependentTest#duplicateAndOlderFixesCannotMovePosition",
+    "com.drivemate.app.nav.GpsIndependentTest#implausibleJumpDoesNotReplacePosition",
+    "com.drivemate.app.nav.GpsIndependentTest#longitudeWrapIsAShortMovement",
+    "com.drivemate.app.nav.GpsIndependentTest#networkFixCannotEstablishNavigationPosition",
+    "com.drivemate.app.nav.GpsIndependentTest#poorPrecisionCannotEstablishNavigationPosition",
+    "com.drivemate.app.nav.GpsIndependentTest#lossOfFreshFixExpiresAuthority",
+    "com.drivemate.app.nav.GpsIndependentTest#uncertainPositionNeverAutomaticallyRecentres",
+    "com.drivemate.app.nav.GpsIndependentTest#uncertaintyPreservesTheExistingMapView",
+    "com.drivemate.app.nav.GpsIndependentTest#firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+    "com.drivemate.app.nav.GpsIndependentTest#uncertaintyNoticeRemainsVisibleDuringRerouting",
+    "com.drivemate.app.nav.GpsIndependentTest#invalidationRemovesCachedLaneConfidenceImmediately",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#lossHidesLanesBeforeShowingTheDelayedVisualWarning",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#intermittentBadFixesCannotAccumulateIntoAContinuousWarning",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#recoveryRequiresStableLaneConfidenceButClearsTheLabelImmediately",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#uncertainMapRemainsPannableWithoutTimedRecentering",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#seededUncertaintySequencesMatchTheIndependentElapsedTimeOracle",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#invalidNumbersAlwaysFailClosedForPositionAndLanes",
+    "com.drivemate.app.nav.GpsPreferenceFlowTest#repeatedSensorResetCannotCarryHeadingBetweenSessions",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#missingSensorsDoNotRegisterAndStillAllowMeasuredGpsHeading",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#stopClearsHeadingEvenWhenSensorsWereUnavailable",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#deniedRegistrationFallsBackWithoutCrashing",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#bothRegistrationFailuresAreContainedAndPartialListenersRemoved",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#accelerometerIsUsedWhenGravitySensorIsMissing",
+    "com.drivemate.app.nav.GpsSensorAdapterTest#successfulStopAndRestartDoNotReusePreviousHeading"
+  ],
+  "cases": [
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#recoveredPositionResetsContinuousUncertaintyTimer",
+      "suite": "GpsAcceptanceTest",
+      "case": "recoveredPositionResetsContinuousUncertaintyTimer",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#briefGpsLossKeepsExistingSpokenWarningQuiet",
+      "suite": "GpsAcceptanceTest",
+      "case": "briefGpsLossKeepsExistingSpokenWarningQuiet",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#negativeAccuracyCannotClaimLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "negativeAccuracyCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#stalePositionHidesLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "stalePositionHidesLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#invalidGyroCannotPoisonHeading",
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidGyroCannotPoisonHeading",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#missingAccuracyCannotClaimLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "missingAccuracyCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#sensorsCannotKeepHeadingFreshIndefinitely",
+      "suite": "GpsAcceptanceTest",
+      "case": "sensorsCannotKeepHeadingFreshIndefinitely",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#uncertainLabelStartsAtThreeSeconds",
+      "suite": "GpsAcceptanceTest",
+      "case": "uncertainLabelStartsAtThreeSeconds",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#existingSpokenWarningStillStartsAtOneMinute",
+      "suite": "GpsAcceptanceTest",
+      "case": "existingSpokenWarningStillStartsAtOneMinute",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#reliablePositionAllowsLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "reliablePositionAllowsLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#stationaryGpsDoesNotChangeHeading",
+      "suite": "GpsAcceptanceTest",
+      "case": "stationaryGpsDoesNotChangeHeading",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#goodPositionClearsUncertaintyImmediately",
+      "suite": "GpsAcceptanceTest",
+      "case": "goodPositionClearsUncertaintyImmediately",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#invalidRouteDistanceCannotClaimLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidRouteDistanceCannotClaimLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#inaccuratePositionHidesLanesImmediately",
+      "suite": "GpsAcceptanceTest",
+      "case": "inaccuratePositionHidesLanesImmediately",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#estimatedPositionNeverAllowsLanes",
+      "suite": "GpsAcceptanceTest",
+      "case": "estimatedPositionNeverAllowsLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#lanesRecoverOnlyAfterStableFixes",
+      "suite": "GpsAcceptanceTest",
+      "case": "lanesRecoverOnlyAfterStableFixes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#olderGyroSampleCannotRewindIntegrationClock",
+      "suite": "GpsAcceptanceTest",
+      "case": "olderGyroSampleCannotRewindIntegrationClock",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#gyroSupportsHeadingBetweenMeasuredFixes",
+      "suite": "GpsAcceptanceTest",
+      "case": "gyroSupportsHeadingBetweenMeasuredFixes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsAcceptanceTest#invalidGravityCannotPoisonHeading",
+      "suite": "GpsAcceptanceTest",
+      "case": "invalidGravityCannotPoisonHeading",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#farFutureFixCannotEstablishPosition",
+      "suite": "GpsIndependentTest",
+      "case": "farFutureFixCannotEstablishPosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+      "suite": "GpsIndependentTest",
+      "case": "firstCachedPreviewIsAllowedWithoutForcingALaterSnapBack",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#estimatedPositionCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "estimatedPositionCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#uncertainPositionNeverAutomaticallyRecentres",
+      "suite": "GpsIndependentTest",
+      "case": "uncertainPositionNeverAutomaticallyRecentres",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#noPermissionCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "noPermissionCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#implausibleJumpDoesNotReplacePosition",
+      "suite": "GpsIndependentTest",
+      "case": "implausibleJumpDoesNotReplacePosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#invalidationRemovesCachedLaneConfidenceImmediately",
+      "suite": "GpsIndependentTest",
+      "case": "invalidationRemovesCachedLaneConfidenceImmediately",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#nonfiniteAccuracyCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "nonfiniteAccuracyCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#uncertaintyPreservesTheExistingMapView",
+      "suite": "GpsIndependentTest",
+      "case": "uncertaintyPreservesTheExistingMapView",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#resetDoesNotCarryUncertaintyAcrossSessions",
+      "suite": "GpsIndependentTest",
+      "case": "resetDoesNotCarryUncertaintyAcrossSessions",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#freshnessBoundaryIsExplicit",
+      "suite": "GpsIndependentTest",
+      "case": "freshnessBoundaryIsExplicit",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#uncertaintyNoticeRemainsVisibleDuringRerouting",
+      "suite": "GpsIndependentTest",
+      "case": "uncertaintyNoticeRemainsVisibleDuringRerouting",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#unreliablePositionNeedsContinuousThreeSecondsAcrossManyUpdates",
+      "suite": "GpsIndependentTest",
+      "case": "unreliablePositionNeedsContinuousThreeSecondsAcrossManyUpdates",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#invalidCoordinatesAreRejected",
+      "suite": "GpsIndependentTest",
+      "case": "invalidCoordinatesAreRejected",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#lossOfFreshFixExpiresAuthority",
+      "suite": "GpsIndependentTest",
+      "case": "lossOfFreshFixExpiresAuthority",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#longitudeWrapIsAShortMovement",
+      "suite": "GpsIndependentTest",
+      "case": "longitudeWrapIsAShortMovement",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#staleFixCannotEstablishPosition",
+      "suite": "GpsIndependentTest",
+      "case": "staleFixCannotEstablishPosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#missingTimestampCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "missingTimestampCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#missingAccuracyCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "missingAccuracyCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#duplicateAndOlderFixesCannotMovePosition",
+      "suite": "GpsIndependentTest",
+      "case": "duplicateAndOlderFixesCannotMovePosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#networkFixCannotEstablishNavigationPosition",
+      "suite": "GpsIndependentTest",
+      "case": "networkFixCannotEstablishNavigationPosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#backwardClockStartsANewUncertaintyPeriod",
+      "suite": "GpsIndependentTest",
+      "case": "backwardClockStartsANewUncertaintyPeriod",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#futureFixCannotBecomeReliable",
+      "suite": "GpsIndependentTest",
+      "case": "futureFixCannotBecomeReliable",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsIndependentTest#poorPrecisionCannotEstablishNavigationPosition",
+      "suite": "GpsIndependentTest",
+      "case": "poorPrecisionCannotEstablishNavigationPosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#intermittentBadFixesCannotAccumulateIntoAContinuousWarning",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "intermittentBadFixesCannotAccumulateIntoAContinuousWarning",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#lossHidesLanesBeforeShowingTheDelayedVisualWarning",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "lossHidesLanesBeforeShowingTheDelayedVisualWarning",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#repeatedSensorResetCannotCarryHeadingBetweenSessions",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "repeatedSensorResetCannotCarryHeadingBetweenSessions",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "freshGyroHeadingCannotRestoreLanesForAnEstimatedPosition",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#invalidNumbersAlwaysFailClosedForPositionAndLanes",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "invalidNumbersAlwaysFailClosedForPositionAndLanes",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#recoveryRequiresStableLaneConfidenceButClearsTheLabelImmediately",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "recoveryRequiresStableLaneConfidenceButClearsTheLabelImmediately",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#seededUncertaintySequencesMatchTheIndependentElapsedTimeOracle",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "seededUncertaintySequencesMatchTheIndependentElapsedTimeOracle",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsPreferenceFlowTest#uncertainMapRemainsPannableWithoutTimedRecentering",
+      "suite": "GpsPreferenceFlowTest",
+      "case": "uncertainMapRemainsPannableWithoutTimedRecentering",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#missingSensorsDoNotRegisterAndStillAllowMeasuredGpsHeading",
+      "suite": "GpsSensorAdapterTest",
+      "case": "missingSensorsDoNotRegisterAndStillAllowMeasuredGpsHeading",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#bothRegistrationFailuresAreContainedAndPartialListenersRemoved",
+      "suite": "GpsSensorAdapterTest",
+      "case": "bothRegistrationFailuresAreContainedAndPartialListenersRemoved",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#successfulStopAndRestartDoNotReusePreviousHeading",
+      "suite": "GpsSensorAdapterTest",
+      "case": "successfulStopAndRestartDoNotReusePreviousHeading",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#accelerometerIsUsedWhenGravitySensorIsMissing",
+      "suite": "GpsSensorAdapterTest",
+      "case": "accelerometerIsUsedWhenGravitySensorIsMissing",
+      "passed": true
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#stopClearsHeadingEvenWhenSensorsWereUnavailable",
+      "suite": "GpsSensorAdapterTest",
+      "case": "stopClearsHeadingEvenWhenSensorsWereUnavailable",
+      "passed": false
+    },
+    {
+      "id": "com.drivemate.app.nav.GpsSensorAdapterTest#deniedRegistrationFallsBackWithoutCrashing",
+      "suite": "GpsSensorAdapterTest",
+      "case": "deniedRegistrationFallsBackWithoutCrashing",
+      "passed": true
+    }
+  ],
+  "total": 57,
+  "passed": 56,
+  "gradle_exit": 1,
+  "validation_errors": [
+    "failed, errored or skipped test",
+    "Gradle process failed"
+  ],
+  "valid": false,
+  "scope": "Automated production Kotlin and Android simulation contracts"
+}

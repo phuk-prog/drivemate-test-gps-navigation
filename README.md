@@ -14,7 +14,7 @@ The baseline records absent continuous-uncertainty support explicitly; those cas
 
 `python3 scripts/compare.py` verifies the identical 19-case before/after contract and requires 24 additional final edge cases. The three baseline cases for the absent uncertainty policy are reported as missing support, not physical timing measurements.
 
-## Category 1 comparison — 23 October 2026
+## Initial Category 1 comparison — 23 October 2026
 
 | Check | Result |
 |---|---|
@@ -29,3 +29,22 @@ The baseline records absent continuous-uncertainty support explicitly; those cas
 See `results/comparison.json` for the calculated comparison, `results/evidence.json` for exact commits and source identity, and `results/coverage.json` for each checklist requirement and its automated coverage. The candidate is in [private app PR #4](https://github.com/phuk-prog/drivemate-app/pull/4); production main is unchanged. CI executes on that private PR. No app source or APK is published here.
 
 Private [GitHub verification run](https://github.com/phuk-prog/drivemate-app/actions/runs/39966405982) passed for candidate `d4089ce908d4948f42f1067f2ef4f56ba1c30385`: 51 app tests, two runner self-tests, source scan, lint and debug assembly. The automated verification passed.
+
+## Expanded preference verification
+
+The expanded suite is defined by `contracts/manifest.json`. The runner requires every expected class/method identity exactly once and rejects failures, skipped cases, malformed results and a failed Gradle process. It records fingerprints for both the original 19-case contract and the complete executed suite.
+
+`contracts/preferences.json` maps all four agreed GPS preferences to runtime tests and static source integration guards. `scripts/coverage_check.py` fails if a preference is omitted or points at missing evidence. Static guards are labelled separately from runtime tests and do not claim UI rendering coverage.
+
+Android sensor-adapter tests run automatically using Robolectric 4.14.1 and Mockito 5.14.2 in the private test build; these dependencies are not packaged into the app. Additional combined scenarios include a fixed-seed, 5,000-event uncertainty sequence. The new baseline found one cached-heading reset bug; see `results/reliability/` for the unchanged-suite comparison. The original comparison remains preserved above.
+
+Run the expanded private verification:
+
+```
+python3 scripts/run.py --app /private/checkout --phase final --production-base APP_SHA --full-checks --report results/reliability/final.json
+python3 scripts/wiring.py --app /private/checkout --out results/reliability/wiring.json
+python3 scripts/coverage_check.py
+python3 scripts/reliability_compare.py
+```
+
+Only automated verification is required. Private source and raw build logs stay private.
