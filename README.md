@@ -1,3 +1,7 @@
+> **Current execution (2026-10-23): all tests run publicly.** Relevant app components may be published; the combined app and final APK generation stay private. Historical private-CI references below are superseded by [TESTING_POLICY.md](TESTING_POLICY.md).
+>
+> All 57 existing GPS cases now execute in the [public Batch A workflow](https://github.com/phuk-prog/drivemate-test-map-display/actions/runs/40021527920), plus eight new GPS boundary cases: 65 distinct candidate GPS checks pass. Original comparison 10/19 → 19/19; expanded GPS 11/27 → 27/27; Android adapter 4/6 → 6/6; additional candidate-only verification 32/32. [Exact public evidence and limits](https://github.com/phuk-prog/drivemate-test-map-display/tree/65dd04b70cef4f28195a74b81b46ec8a5a2fc3ae/results/batch-a-public-20261023). Component success is not whole-app acceptance or legal certification. Implementation is staged in private draft PR #8, not merged/released.
+
 # DriveMate GPS and navigation acceptance
 
 ## Shared GPS + map + roundabout batch policy
