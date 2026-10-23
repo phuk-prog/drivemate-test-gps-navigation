@@ -14,4 +14,5 @@ jobs:
       - name: Validate public scripts and result consistency (not app execution)
         run: |
           python3 -m py_compile scripts/run.py scripts/compare.py
+          python3 -m unittest discover -s tools_tests
           python3 scripts/compare.py

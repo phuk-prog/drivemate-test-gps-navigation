@@ -33,6 +33,7 @@ Use a parked phone or controlled simulator for these checks; no distracting inte
 | Candidate, identical acceptance inputs | 19/19 passed |
 | Separate final verification | 43/43 GPS checks passed, including 24 additional edge cases |
 | Existing map regressions | 8/8 passed |
+| Runner infrastructure checks | 2/2 self-tests passed; not counted as app behaviour tests |
 | Whole-app verification | 51/51 tests; lint 0 errors and 108 warnings; debug assembly passed |
 | Device acceptance | Outstanding; checklist items remain unmarked |
 

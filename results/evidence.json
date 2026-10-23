@@ -1,13 +1,13 @@
 {
   "baseline_app_sha": "f859918ad60d87c6bc9f6b4ffb52e151cd3e212c",
   "baseline_app_tree": "77e85ec5d30c99a3f88d922a046311081f688f4d",
-  "candidate_app_sha": "86f9d06a59f1610db86aa5478c5c326ad9e8d938",
+  "candidate_app_sha": "d4089ce908d4948f42f1067f2ef4f56ba1c30385",
   "candidate_app_tree": "127025d3d27d139e50278520492493a48baff513",
-  "public_contracts_sha": "1fec411cf615b302d2a788a898ed44d9824dd9f6",
+  "public_contracts_sha": "4daf587d6589b454f9700dbc8b9d291bc304cadd",
   "private_pr": "https://github.com/phuk-prog/drivemate-app/pull/4",
-  "ci_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39965765449",
+  "ci_run": "https://github.com/phuk-prog/drivemate-app/actions/runs/39966405982",
   "ci_status": "in_progress",
-  "executed_local_commit": "7e0cde0acb080b9d6c8430f7f7ab79c32c4a11cd",
+  "executed_local_commit": "f33e7478ba6ec097dd67d078953bfb001090b758",
   "local_app_tree": "127025d3d27d139e50278520492493a48baff513",
   "local_base_commit": "88b638cf9992dbf18c504e31da202b6b2add0cb4",
   "baseline_source_equivalence": "Baseline app tree equals GitHub production app tree; candidate app tree equals tested local app tree. Local commit history differs from GitHub.",
@@ -17,7 +17,7 @@
     "errors": 0,
     "skipped": 0
   },
-  "source_sha256": "bf2b4790e4a7ba9d65767481733778006802580c3b0960d15fc7025f93faf075",
+  "source_sha256": "bc5ff2a1a46ce2f3724e0c57cc872966e4bdf831761bce8a8dfdcff048ea8f74",
   "source_scan_passed": true,
   "lint_errors": 0,
   "lint_warnings": 108,
@@ -26,5 +26,16 @@
   "device_checks": "not executed",
   "measured_physical_accuracy_improvement": "unavailable",
   "ai_tokens_and_cost": "unavailable",
-  "release_ready": false
+  "release_ready": false,
+  "runner_self_tests": 2,
+  "candidate_source_tree": "37055f00d3ff7e5d46eadbda2990a95f3c4294e5",
+  "executed_local_source_tree": "37055f00d3ff7e5d46eadbda2990a95f3c4294e5",
+  "source_identity": "The complete tested local Git tree equals the private candidate Git tree; only commit history differs. Baseline app tree also equals the production baseline app tree.",
+  "superseded_ci_run": {
+    "url": "https://github.com/phuk-prog/drivemate-app/actions/runs/39965765449",
+    "conclusion": "failure",
+    "cause": "Result directory absent when writing the test report in a fresh checkout",
+    "fix": "Create the result directory and add a fresh-checkout runner regression test",
+    "production_code_unchanged_by_runner_recovery": true
+  }
 }
